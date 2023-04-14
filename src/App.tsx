@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import HomeView from "./home";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+interface Props{
+  param: string;
 }
 
-export default App;
+export default function App(props:Props) {
+  return(
+      <div style={{backgroundColor: "red"}}> 
+          <HomeView param="Teste"></HomeView>
+          <h2>AppTsx</h2>
+          <span>{props.param}</span>
+      </div>
+  )
+}   
